@@ -1,0 +1,72 @@
+#!markdown
+
+### Imperative Abstraction - classes with single method and fallows more procedural apporach 
+ `e.g`
+ 
+
+#!csharp
+
+using static System.Console;
+
+#!csharp
+
+public class Calculation
+{
+    public int CalculateOffset() // contain single method and created based on the action performendd
+    {
+        WriteLine("CalculateOffset");
+       return -1;
+    }
+}
+
+public class SaveOffsetHandler
+{
+    public void SaveOffset(int i)
+    {
+        WriteLine("SaveOffset");
+    }
+}
+
+public class Application
+{
+    
+    public void CalculateAndPrint()
+    {
+    Calculation c = new Calculation();
+    SaveOffsetHandler handler=new SaveOffsetHandler();
+    c.CalculateOffset();
+    handler.SaveOffset(10);
+    }
+}
+
+Application app = new ();
+app.CalculateAndPrint();
+
+#!csharp
+
+public class ImagePair
+{
+    public int CalculateOffset() 
+    {
+        WriteLine("CalculateOffset");
+       return -1;
+    }
+
+    public void SaveOffset(int i)
+    {
+        WriteLine("SaveOffset");
+    }
+}
+
+public class Application
+{
+    public void CalculateAndPrint()
+    {
+        ImagePair c = new ImagePair();
+        c.CalculateOffset();
+        c.SaveOffset(10);
+    }
+}
+
+Application app = new ();
+app.CalculateAndPrint();
