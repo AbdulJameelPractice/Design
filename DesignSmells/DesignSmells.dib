@@ -1,7 +1,7 @@
 #!markdown
 
-### Imperative Abstraction - classes with single method and fallows more procedural apporach 
- `e.g`
+##### Imperative Abstraction - classes with single method and fallows more procedural apporach 
+
  
 
 #!csharp
@@ -70,3 +70,33 @@ public class Application
 
 Application app = new ();
 app.CalculateAndPrint();
+
+#!markdown
+
+##### Missing Abstraction  - the smell arises when clumpses of data or encoded strings are used instead of a class or interface
+`e.g` ISBN number as string 
+
+#!csharp
+
+// Provide crisp and conceptual boundaries and a unique identity”
+public class ISBN
+{
+    public string IsbnString {get;set;}
+    public string GroupNumber {get;set;}
+}
+
+#!markdown
+
+##### Untilized Abstraction - abstraction is left unused
+ - e.g method or classes left unused
+
+#!markdown
+
+##### Incomplete abstraction
+ - car with accelrator but without brake.
+ - abstract factory to create items method but not to delete the items
+
+#!markdown
+
+##### Unnecessary Abstractions
+- e.g Best Seller book extends Book, instead we can have a Book with IsBestSeller Property
